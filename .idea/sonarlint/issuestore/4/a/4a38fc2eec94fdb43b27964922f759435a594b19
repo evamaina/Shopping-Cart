@@ -1,0 +1,5 @@
+
+esquid:UselessImportCheck
+"5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ8¿•ºŽ³-
+gsquid:UselessImportCheck	"7Remove this unused import 'android.widget.BaseAdapter'.(ŒŸà“ýÿÿÿÿ8–ê““³-
+_squid:UselessImportCheck"4Remove this unused import 'android.widget.ListView'.(Œ‰Ö×8°‹¥“³-

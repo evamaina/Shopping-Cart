@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TermsFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/terms_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TERMS AND CONDITIONS"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/terms_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Donec finibus molestie sapien sit amet tincidunt. Nunc ultrices nisl ante, ac ullamcorper dolor pulvinar sit amet. Sed quis tincidunt nunc. Pellentesque eget turpis quam. Vivamus faucibus quam enim. Vestibulum gravida mauris at sollicitudin blandit.
+Donec urna nibh, vulputate commodo mauris et, porttitor porttitor mauris. Integer sit amet arcu sit amet massa efficitur vestibulum.
+Curabitur aliquet tellus ut libero posuere, ut maximus ipsum fermentum.
+Donec finibus molestie sapien sit amet tincidunt. Nunc ultrices nisl ante, ac ullamcorper dolor pulvinar sit amet. Sed quis tincidunt nunc. Pellentesque eget turpis quam. Vivamus faucibus quam enim. Vestibulum gravid "
+            android:textSize="20sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payments"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:textColor="#000000"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"/>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donec finibus molestie sapien sit amet tincidunt. Nunc ultrices nisl ante, ac ullamcorper dolor pulvinar sit amet. Sed quis tincidunt nunc. Pellentesque eget turpis quam. Vivamus faucibus quam enim. "
+            android:textSize="20sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

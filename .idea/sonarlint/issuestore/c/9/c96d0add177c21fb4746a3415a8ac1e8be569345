@@ -1,0 +1,12 @@
+
+Isquid:S1659&"&Declare "lastName" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Hsquid:S1659&"%Declare "country" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Isquid:S1659&"&Declare "address2" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+[squid:S00107r"<Method has 9 parameters, which is greater than 7 authorized.(€ø8¢Îœ¬µ-
+vsquid:S00117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾“¥åøÿÿÿÿ8¢Îœ¬µ-
+Asquid:S1659'"$Declare "cartId" on a separate line.(Öà«18øò¨‹µ-
+Fsquid:S1659&"#Declare "state" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Esquid:S1659&""Declare "city" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Hsquid:S1659&"%Declare "zipcode" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+usquid:S00116'"WRename this field "access_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öà«18×¹ó†µ-
+Isquid:S1659&"&Declare "address1" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-

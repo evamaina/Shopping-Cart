@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:background="#F2F2F2" />
+
+    <TextView
+        android:id="@+id/bag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WOMEN ULTRA LIGHT DOWN JACKET"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="120dp"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/sourcesanspro_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/bag_name"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/bag_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/strike_line"
+            android:textSize="18sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_polygon_inactive" />
+
+        <TextView
+            android:id="@+id/bag_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:layout_marginRight="60dp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_edit_2"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

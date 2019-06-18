@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/all_pro"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AllProductsFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_nav"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/launcher"
+            android:layout_marginLeft="80dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_filter_icon"
+            android:layout_marginLeft="80dp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/men_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#93D6DC"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEN"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="50sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OUTWEAR"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:textSize="30sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/products_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/men_layout"
+        android:padding="20dp"
+        android:background="#F2F2F2">
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/products_layout"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ª»«è
+=squid:S1170"!Make this final field static too.(ãµ®¶øÿÿÿÿ
+rsquid:S00116"URename this field "PAGE_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãµ®¶øÿÿÿÿ
+^squid:UselessImportCheck
+"5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ

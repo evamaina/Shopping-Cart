@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_back"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textAlignment="center"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
+
+<LinearLayout
+    android:id="@+id/horizontal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@+id/toolbar"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp">
+    
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/text_input_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:inputType="text"
+           />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/vertical_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_below="@+id/horizontal_layout">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_retype_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Retype Password"
+                android:inputType="textPassword"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATE OF BIRTH"
+        android:layout_below="@id/vertical_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/date_textView"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DD"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="MM"
+                android:inputType="text"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_input_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="YYYY"
+                android:inputType="text"
+                />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gender_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/date_layout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT YOUR GENDER"
+            android:layout_weight="2.5"/>
+
+        <TextView
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_weight="1"
+            android:onClick="setMale"/>
+
+        <TextView
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:layout_weight="1"
+            android:onClick="setFemale"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/gender_indicator_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_male_indicator"
+        android:layout_below="@+id/gender_layout"
+        android:scaleType="fitXY"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/gender_indicator_line">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I AGREE THE TERMS OF USE"/>
+
+        <Switch
+            android:id="@+id/switch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender_indicator_line"
+            android:layout_marginRight="16dp"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/ic_track"
+            android:padding="16dp"
+            android:textColor="#454545"
+            android:layout_marginEnd="16dp" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:layout_below="@+id/switch_layout"
+        android:background="#EFB961"
+        android:layout_margin="20dp"
+        android:textColor="#ffff"
+        android:textSize="20dp" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/ic_polygon_active"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_below="@id/signInButton"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="23dp"
+        android:background="#F2F2F2"
+        android:onClick="signIn">
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Already a member?"
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN"
+            android:layout_weight="1.6"
+            android:textColor="#EFB961"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

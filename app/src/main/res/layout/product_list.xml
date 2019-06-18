@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/bag_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEN ULTRA LIGHT DOWN JACKET"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="120dp"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/sourcesanspro_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/bag_name"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strike_line"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+
+        <TextView
+            android:id="@+id/discounted_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$110.50"
+            android:textStyle="bold"
+            android:layout_weight="0.4"
+            android:textSize="18sp"
+            android:fontFamily="@font/sourcesanspro_regular"/>
+    </LinearLayout>
+
+</RelativeLayout>

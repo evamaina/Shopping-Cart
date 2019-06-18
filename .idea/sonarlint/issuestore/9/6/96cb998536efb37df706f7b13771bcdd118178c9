@@ -1,0 +1,5 @@
+
+tsquid:UselessImportCheck"DRemove this unused import 'android.support.design.widget.TabLayout'.(ªë¿Áøÿÿÿÿ8…ê£û­-
+isquid:UselessImportCheck">Remove this unused import 'android.support.v4.view.ViewPager'.(«˜‘’8À³Ëƒ®-
+usquid:UselessImportCheck"ERemove this unused import 'android.support.v7.app.AppCompatActivity'.(«Û®ûüÿÿÿÿ8ß¹‹³-
+qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(ˆ‰™Ïşÿÿÿÿ8ß¹‹³-

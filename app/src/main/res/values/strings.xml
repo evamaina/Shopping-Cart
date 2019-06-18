@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Shopping Cart</string>
+    <string name="intro_text">Follow the latest fashion trends </string>
+    <string name="logo">Storex</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="continuation">and shop with</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur nec.</string>
+    <string name="signin">SIGN IN</string>
+    <string name="not_a_member">Not a member?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="strike_line"> <strike>$120.00</strike> </string>
+    <string name="reset_password">Enter your registered Storex password and we will email you a link to reset your password.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

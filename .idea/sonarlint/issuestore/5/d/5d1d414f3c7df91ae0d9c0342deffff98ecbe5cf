@@ -1,0 +1,4 @@
+
+Xsquid:UselessImportCheck"4Remove this unused import 'android.content.Context'.(©Ê‰è
+ssquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "view".(ÄÍÍ
+Usquid:UselessImportCheck",Remove this unused import 'android.net.Uri'.(òêû‘ıÿÿÿÿ
