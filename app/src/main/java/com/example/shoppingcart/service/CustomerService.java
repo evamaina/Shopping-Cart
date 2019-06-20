@@ -1,5 +1,6 @@
 package com.example.shoppingcart.service;
 
+import com.example.shoppingcart.models.Customer;
 import com.example.shoppingcart.models.CustomerResponse;
 import com.example.shoppingcart.models.ProductResponse;
 
@@ -25,16 +26,16 @@ public interface CustomerService {
 
     @PUT("/customers/address")
     @FormUrlEncoded
-    Call<CustomerResponse> updateCustomerAddress(@Field("name") String name,
-                                                 @Field("address_1") String address1,
+    Call<CustomerResponse> updateCustomerAddress(@Field("address_1") String address1,
                                                  @Field("address_2") String address2,
                                                  @Field("city") String city,
                                                  @Field("region") String state,
                                                  @Field("postal_code") String zipCode,
                                                  @Field("country") String country,
                                                  @Field("shipping_region_id") int shippingId,
-                                                 @Header("USER-KEY") String token)
-            ;
+                                                 @Header("USER-KEY") String token);
+    @GET("/customer")
+    Call<Customer> getCustomer(@Header("USER-KEY") String token);
 
 
 

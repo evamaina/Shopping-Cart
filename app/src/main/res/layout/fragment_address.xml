@@ -143,14 +143,17 @@
             android:paddingBottom="30dp"
             android:backgroundTint="#D8D8D8"
             android:fontFamily="@font/sourcesanspro_regular"/>
-        <com.jaredrummler.materialspinner.MaterialSpinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/material_spinner"
-            app:ms_hint_color="#000"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            />
     </LinearLayout>
+
+    <com.jaredrummler.materialspinner.MaterialSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/material_spinner"
+        app:ms_hint_color="#000"
+        android:layout_above="@id/save_continue"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        />
 
     <Button
         android:id="@+id/save_continue"

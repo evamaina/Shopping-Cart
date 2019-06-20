@@ -8,6 +8,7 @@ public class Customer {
     private String address_2;
     private String city;
     private String region;
+    private String country;
     private String postal_code;
     private int shipping_region_id;
     private String day_phone;
@@ -17,7 +18,7 @@ public class Customer {
 
     public Customer(String customer_id, String name, String email, String address_1, String address_2,
                     String city, String region, String postal_code, int shipping_region_id,
-                    String day_phone, String eve_phone, String mob_phone) {
+                    String day_phone, String eve_phone, String mob_phone, String country) {
         this.customer_id = customer_id;
         this.name = name;
         this.email = email;
@@ -30,6 +31,15 @@ public class Customer {
         this.day_phone = day_phone;
         this.eve_phone = eve_phone;
         this.mob_phone = mob_phone;
+        this.country = country;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public String getCustomer_id() {

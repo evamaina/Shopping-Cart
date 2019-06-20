@@ -14,35 +14,31 @@ import com.example.shoppingcart.AddressFragment;
 import com.example.shoppingcart.BackFragment;
 import com.example.shoppingcart.PaymentFragment;
 import com.example.shoppingcart.R;
+import com.example.shoppingcart.utilities.OnRequestSuccessListener;
 
 public class CheckoutAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 3;
     private  Context context;
     private String[] tabTitles = new String[] { "ADDRESS", "PAYMENT", "COMPLETE"};
+    OnRequestSuccessListener onRequestSuccessListener;
 
-    public CheckoutAdapter(FragmentManager fm, Context context) {
+    public CheckoutAdapter(FragmentManager fm, Context context, OnRequestSuccessListener onRequestSuccessListener) {
         super(fm);
         this.context = context;
-
+        this.onRequestSuccessListener = onRequestSuccessListener;
     }
-
-//    @Nullable
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        return tabTitles[position];
-//    }
 
     @Override
     public Fragment getItem(int i) {
         if (i == 0) {
-            return new AddressFragment();
+            AddressFragment addressFragment = new AddressFragment();
+            addressFragment.setOnRequestSuccessListener(onRequestSuccessListener);
+            return addressFragment;
         }else if (i == 1) {
             return new PaymentFragment();
         }else {
             return new BackFragment();
         }
-
-
     }
 
     @Override

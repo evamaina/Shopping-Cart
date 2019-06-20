@@ -37,4 +37,10 @@ public class ApiUtilities {
         return RetrofitClient.getClient().create(ShipppingService.class);
     }
 
+    public static StripeService stripeService(){
+        return RetrofitClient.getClient().create(StripeService.class);
+    }
+
+
+
 }

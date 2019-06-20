@@ -17,8 +17,13 @@ import com.example.shoppingcart.service.ApiUtilities;
 import com.example.shoppingcart.service.CustomerService;
 import com.example.shoppingcart.service.OrderService;
 import com.example.shoppingcart.service.ShipppingService;
+import com.example.shoppingcart.utilities.Constants;
+import com.example.shoppingcart.utilities.OnRequestSuccessListener;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
+import net.skoumal.fragmentback.BackFragment;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +44,12 @@ public class AddressFragment extends Fragment {
     String access_token, cartId;
     ShipppingService shipppingService;
     MaterialSpinner materialSpinner;
+
+    OnRequestSuccessListener onRequestSuccessListener;
+
+    public void setOnRequestSuccessListener(OnRequestSuccessListener onRequestSuccessListener) {
+        this.onRequestSuccessListener = onRequestSuccessListener;
+    }
 
     public AddressFragment() {
         // Required empty public constructor
@@ -72,14 +83,12 @@ public class AddressFragment extends Fragment {
             public void onClick(View v) {
                 String name  = firstName.getText().toString() + " " + lastName.getText().toString();
                 if (access_token != null) {
-                    updateCustomerAddress(name, address1.getText().toString(),
+                    updateCustomerAddress( address1.getText().toString(),
                             address2.getText().toString(),
                             city.getText().toString(),
                             state.getText().toString(),
                             zipcode.getText().toString(),
                             country.getText().toString(), 1, access_token);
-
-
                 }
 
 
@@ -111,23 +120,27 @@ public class AddressFragment extends Fragment {
         });
     }
 
-    private void updateCustomerAddress(String name, String address1, String address2, String city, String state, String zipCode, String country, int shippingId, final String access_token) {
-        customerService.updateCustomerAddress(name, address1, address2, city, state, zipCode, country,shippingId, access_token).enqueue(new Callback<CustomerResponse>() {
+    private void updateCustomerAddress( String address1, String address2, String city, String state, String zipCode, String country, int shippingId, final String access_token) {
+        customerService.updateCustomerAddress(address1,
+                address2, city, state, zipCode, country,shippingId, access_token).enqueue(new Callback<CustomerResponse>() {
             @Override
             public void onResponse(Call<CustomerResponse> call, Response<CustomerResponse> response) {
                 if (response.isSuccessful()) {
                     createOrder(cartId, 1, 1, access_token);
+                    onRequestSuccessListener.onRequestSuccessListener(1);
                     Toast.makeText(getContext(), "order created", Toast.LENGTH_LONG).show();
                     return;
-
                 }
-                Toast.makeText(getContext(), "error occured ", Toast.LENGTH_LONG).show();
+                try {
+                    Toast.makeText(getContext(), response.errorBody().string(), Toast.LENGTH_LONG).show();
+                } catch (IOException e) {
+                    Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override
             public void onFailure(Call<CustomerResponse> call, Throwable t) {
                 Toast.makeText(getContext(), t.getMessage(), Toast.LENGTH_LONG).show();
-
             }
         });
 
@@ -153,5 +166,4 @@ public class AddressFragment extends Fragment {
         });
 
     }
-
 }

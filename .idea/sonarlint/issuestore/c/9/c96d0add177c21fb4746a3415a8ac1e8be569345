@@ -1,12 +1,15 @@
 
-Isquid:S1659&"&Declare "lastName" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-Hsquid:S1659&"%Declare "country" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-Isquid:S1659&"&Declare "address2" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-[squid:S00107r"<Method has 9 parameters, which is greater than 7 authorized.(€ø8¢Îœ¬µ-
-vsquid:S00117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾“¥åøÿÿÿÿ8¢Îœ¬µ-
-Asquid:S1659'"$Declare "cartId" on a separate line.(Öà«18øò¨‹µ-
-Fsquid:S1659&"#Declare "state" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-Esquid:S1659&""Declare "city" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-Hsquid:S1659&"%Declare "zipcode" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
-usquid:S00116'"WRename this field "access_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öà«18×¹ó†µ-
-Isquid:S1659&"&Declare "address1" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Isquid:S1659+"&Declare "address1" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Hsquid:S1659+"%Declare "country" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Esquid:S1659+""Declare "city" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Hsquid:S1659+"%Declare "zipcode" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+usquid:S00116,"WRename this field "access_token" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öà«18×¹ó†µ-
+Isquid:S1659+"&Declare "lastName" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Lsquid:S1481T")Remove this unused "name" local variable.(ï»Û°ıÿÿÿÿ8øò€¢·-
+Asquid:S1659,"$Declare "cartId" on a separate line.(Öà«18øò¨‹µ-
+rsquid:UselessImportCheck"BRemove this unused import 'net.skoumal.fragmentback.BackFragment'.(—ÀÕ®ÿÿÿÿÿ8™İˆ¤·-
+`squid:S00107{"<Method has 8 parameters, which is greater than 7 authorized.(ÕÍ¾Óøÿÿÿÿ8¢Îœ¬µ-
+Fsquid:S1659+"#Declare "state" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+Isquid:S1659+"&Declare "address2" on a separate line.(€ÆïŒüÿÿÿÿ8×„µ-
+ysquid:UselessImportCheck"IRemove this unused import 'com.example.shoppingcart.utilities.Constants'.(Ô±ƒíùÿÿÿÿ8™İˆ¤·-
+vsquid:S00117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾“¥åøÿÿÿÿ8¢Îœ¬µ-

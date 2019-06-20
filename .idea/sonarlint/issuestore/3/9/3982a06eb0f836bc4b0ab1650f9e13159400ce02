@@ -1,4 +1,7 @@
 
-usquid:UselessImportCheck"ERemove this unused import 'android.support.v7.app.AppCompatActivity'.(«Û®ûüÿÿÿÿ8®Íµ¬µ-
-ƒsquid:UselessImportCheck"SRemove this unused import 'net.skoumal.fragmentback.BackFragmentAppCompatActivity'.(ÜÇ½ ùÿÿÿÿ8‡õ¶¬µ-
->squid:S1481 "(Remove this unused "tab" local variable.(­¸s
+ysquid:UselessImportCheck"IRemove this unused import 'com.example.shoppingcart.utilities.Constants'.(Ô±ƒíùÿÿÿÿ8³¤Ë£·-
+hsquid:UselessImportCheck"8Remove this unused import 'android.app.FragmentManager'.(í£“ûÿÿÿÿ8«†¸¥·-
+ƒsquid:UselessImportCheck"SRemove this unused import 'net.skoumal.fragmentback.BackFragmentAppCompatActivity'.(ÜÇ½ ùÿÿÿÿ8úÛº£·-
+lsquid:UselessImportCheck"<Remove this unused import 'android.support.v4.app.Fragment'.(îñ«úÿÿÿÿ8êŒ¹¥·-
+Esquid:S1481$"(Remove this unused "tab" local variable.(­¸s8«†¸¥·-
+‚squid:UselessImportCheck"RRemove this unused import 'net.skoumal.fragmentback.BackFragmentFragmentActivity'.(¶·Ñ‹üÿÿÿÿ8±ëÊ£·-

@@ -1,0 +1,11 @@
+
+Jsquid:S1659+".Declare "subTotalTextView" on a separate line.(€½κ’όÿÿÿÿ
+Tsquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(χ‰ξƒ
+fsquid:UselessImportCheck"CRemove this unused import 'com.example.shoppingcart.models.CartId'.(ϊΉ-
+Vsquid:UselessImportCheck
+"-Remove this unused import 'android.util.Log'.(Τ¦Ψ²ψÿÿÿÿ
+hsquid:UselessImportCheck"ERemove this unused import 'com.example.shoppingcart.models.Products'.(μεΦJ
+psquid:UselessImportCheck"LRemove this unused import 'com.example.shoppingcart.service.ProductService'.(Ω¬ξ
+rsquid:UselessImportCheck"NRemove this unused import 'com.example.shoppingcart.adapters.ProductsAdapter'.(Δ—β
+\squid:UselessImportCheck"3Remove this unused import 'android.graphics.Paint'.(κύ‚•ÿÿÿÿÿ
+Dsquid:S1659+"(Declare "totalItems" on a separate line.(€½κ’όÿÿÿÿ
