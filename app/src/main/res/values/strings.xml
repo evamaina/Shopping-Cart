@@ -12,4 +12,5 @@
     <string name="reset_password">Enter your registered Storex password and we will email you a link to reset your password.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="stripe_token">pk_test_wGXBGok9pvLqTIu3KSImWkxA001b7fKoWH</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

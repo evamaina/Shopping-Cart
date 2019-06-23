@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.shoppingcart.service.ApiUtilities;
@@ -19,11 +20,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SignInActivity extends AppCompatActivity {
+public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
     CustomerService customerService;
     private EditText email, password;
     private Button signInButton;
     SpotsDialog.Builder builder;
+    ImageView backBtn;
     AlertDialog dialog;
 
 
@@ -34,18 +36,12 @@ public class SignInActivity extends AppCompatActivity {
         email = findViewById(R.id.signInEmail);
         password = findViewById(R.id.signInPassword);
         signInButton = findViewById(R.id.signInButton);
+        backBtn = findViewById(R.id.back_button);
         customerService = ApiUtilities.customerService();
         Paper.init(getApplicationContext());
         builder  = new SpotsDialog.Builder().setContext(this);
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String customerEmail = email.getText().toString();
-                String customerPassword = password.getText().toString();
-                loginCustomer(customerEmail, customerPassword);
-
-            }
-        });
+        signInButton.setOnClickListener(this);
+        backBtn.setOnClickListener(this);
     }
 
     public void resetPassword(View view) {
@@ -95,4 +91,15 @@ public class SignInActivity extends AppCompatActivity {
         dialog.show();
     }
 
+    @Override
+    public void onClick(View v) {
+        if(v==signInButton){
+            String customerEmail = email.getText().toString();
+            String customerPassword = password.getText().toString();
+            loginCustomer(customerEmail, customerPassword);
+        }
+        else if (v == backBtn){
+            finish();
+        }
+    }
 }

@@ -1,9 +1,11 @@
 
-Nsquid:S1659'"+Declare "monthEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-
-Tsquid:S1659&"1Declare "paymentCityTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
-Zsquid:S1659&"7Declare "paymentPostalCogeTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
-Lsquid:S1659'")Declare "cvcEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-
-xsquid:UselessImportCheck"MRemove this unused import 'com.example.shoppingcart.models.CustomerResponse'.(ƒ÷Ñ·8ú¶««·-
-Vsquid:S1659&"3Declare "paymentRegionTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
-Msquid:S1659'"*Declare "yearEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-
-Wsquid:S1659&"4Declare "paymentCountryTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
+`squid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8¹ŸÍÈ·-
+Tsquid:S1659)"1Declare "paymentCityTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
+Lsquid:S1659*")Declare "cvcEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-
+Wsquid:S1659)"4Declare "paymentCountryTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
+Vsquid:S1659)"3Declare "paymentRegionTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
+Nsquid:S1659*"+Declare "monthEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-
+xsquid:UselessImportCheck"MRemove this unused import 'com.example.shoppingcart.models.CustomerResponse'.(ƒ÷Ñ·8ú¶««·-
+Zsquid:S1659)"7Declare "paymentPostalCogeTextView" on a separate line.(„”¬“ùÿÿÿÿ8¶ÖÙª·-
+esquid:UselessImportCheck"5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ8û—ÃÍ·-
+Msquid:S1659*"*Declare "yearEditText" on a separate line.(ÑŽ”…ùÿÿÿÿ8›ÉÓ«·-

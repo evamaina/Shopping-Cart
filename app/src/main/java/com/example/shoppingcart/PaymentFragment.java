@@ -1,6 +1,7 @@
 package com.example.shoppingcart;
 
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import com.stripe.android.model.Token;
 
 import java.io.IOException;
 
+import dmax.dialog.SpotsDialog;
 import io.paperdb.Paper;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,6 +45,8 @@ public class PaymentFragment extends Fragment {
     OnRequestSuccessListener onRequestSuccessListener;
     Stripe stripe;
     StripeService stripeService;
+    SpotsDialog.Builder builder;
+    AlertDialog dialog;
 
     public void setOnRequestSuccessListener(OnRequestSuccessListener onRequestSuccessListener) {
         this.onRequestSuccessListener = onRequestSuccessListener;
@@ -61,6 +66,9 @@ public class PaymentFragment extends Fragment {
         Paper.init(getContext());
         String accessToken = Paper.book().read("accessToken");
         payButton = view.findViewById(R.id.pay_button);
+        builder = new SpotsDialog.Builder().setContext(getContext());
+        builder.setMessage("Loading");
+        dialog = builder.build();
         stripe = new Stripe(getContext(), getString(R.string.stripe_token));
         paymentAddressOneTextView = view.findViewById(R.id.address_one_payment);
         paymentCityTextView = view.findViewById(R.id.state_text);
@@ -82,26 +90,46 @@ public class PaymentFragment extends Fragment {
                 String year = yearEditText.getText().toString();
                 String cardNumber = cardNumbeEditText.getText().toString();
                 String cvcCode = cvcEditText.getText().toString();
+
+                if(cardNumber.isEmpty()){
+                    Toast.makeText(getContext(), "Please input card number ", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if(month.isEmpty()){
+                    Toast.makeText(getContext(), "Please input expiry month", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(year.isEmpty()){
+                    Toast.makeText(getContext(), "Please input expiry year ", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(cvcCode.isEmpty()){
+                    Toast.makeText(getContext(), "Please input cvc code", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 card = Card.create(cardNumber,Integer.parseInt(month), Integer.parseInt(year),cvcCode);
 
                 if(card.validateCard()){
+                    showDialogBox();
                     stripe.createToken(card, new TokenCallback() {
                         @Override
                         public void onSuccess(@NonNull Token result) {
-                            Toast.makeText(getContext(), "hey", Toast.LENGTH_SHORT).show();
+                            dismissDialogBox();
                             int orderId = Paper.book().read("orderId");
-                            stripeService.postCharges(result.getId(),orderId,"Payment for an order",900,"USD").enqueue(new Callback<Card>() {
+                            showDialogBox();
+                            stripeService.postCharges(result.getId(),orderId,"Payment for an order",
+                                    900,"USD").enqueue(new Callback<Card>() {
                                 @Override
                                 public void onResponse(Call<Card> call, Response<Card> response) {
-                                    try {
-                                        Toast.makeText(getContext(), response.errorBody().string(), Toast.LENGTH_SHORT).show();
-                                    } catch (IOException e) {
-                                        Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                                    }
+                                    dismissDialogBox();
+                                    Toast.makeText(getContext(), "Payment Complete ", Toast.LENGTH_SHORT).show();
+                                    onRequestSuccessListener.onRequestSuccessListener(2);
                                 }
-
                                 @Override
                                 public void onFailure(Call<Card> call, Throwable t) {
+                                    dismissDialogBox();
                                     Toast.makeText(getContext(), t.getLocalizedMessage(),Toast.LENGTH_SHORT).show();
                                 }
                             });
@@ -109,9 +137,14 @@ public class PaymentFragment extends Fragment {
 
                         @Override
                         public void onError(@NonNull Exception e) {
+                            dismissDialogBox();
                             Toast.makeText(getContext(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
+                }
+                else {
+                    dismissDialogBox();
+                    Toast.makeText(getContext(), "In valid card details", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -134,9 +167,21 @@ public class PaymentFragment extends Fragment {
 
             @Override
             public void onFailure(Call<Customer> call, Throwable t) {
-
+                Toast.makeText(getContext(), t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void showDialogBox(){
+        if(!dialog.isShowing()){
+            dialog.show();
+        }
+    }
+
+    private void dismissDialogBox(){
+        if(dialog.isShowing()){
+            dialog.dismiss();
+        }
     }
 
 }

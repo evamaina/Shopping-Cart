@@ -74,6 +74,7 @@ public class ContentFragment extends Fragment implements View.OnClickListener, B
         witerSaleText = view.findViewById(R.id.winter_sale_text);
         builder = new SpotsDialog.Builder().setContext(getActivity());
         cartService = ApiUtilities.cartService();
+
         Paper.init(getActivity());
         String cartId = Paper.book().read("cartId");
         if(cartId==null){

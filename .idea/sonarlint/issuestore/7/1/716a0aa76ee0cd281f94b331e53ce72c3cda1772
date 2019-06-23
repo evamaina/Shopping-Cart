@@ -1,5 +1,5 @@
 
-[squid:S00107"<Method has 8 parameters, which is greater than 7 authorized.(Ë¸˜8í‚æ€µ-
 [squid:UselessImportCheck"0Remove this unused import 'retrofit2.http.HEAD'.(ÿ÷Œ8§ÀÚ‡µ-
-[squid:UselessImportCheck"0Remove this unused import 'retrofit2.http.Path'.(íøŠ¡8æå–€µ-
+[squid:S00107"<Method has 8 parameters, which is greater than 7 authorized.(Ë¸˜8í‚æ€µ-
 wsquid:UselessImportCheck"LRemove this unused import 'com.example.shoppingcart.models.ProductResponse'.(Õöâ8æå–€µ-
+[squid:UselessImportCheck"0Remove this unused import 'retrofit2.http.Path'.(íøŠ¡8æå–€µ-

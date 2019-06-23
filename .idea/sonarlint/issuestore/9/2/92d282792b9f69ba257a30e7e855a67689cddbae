@@ -1,6 +1,6 @@
 
 ^squid:UselessImportCheck
 "5Remove this unused import 'android.widget.ImageView'.(ú¯ëàüÿÿÿÿ
-psquid:UselessImportCheck"@Remove this unused import 'android.support.annotation.Nullable'.(Ö‹øïüÿÿÿÿ8ŠÒÿ£·-
-=squid:S1170"!Make this final field static too.(ãµ®¶øÿÿÿÿ
 rsquid:S00116"URename this field "PAGE_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãµ®¶øÿÿÿÿ
+=squid:S1170"!Make this final field static too.(ãµ®¶øÿÿÿÿ
+psquid:UselessImportCheck"@Remove this unused import 'android.support.annotation.Nullable'.(Ö‹øïüÿÿÿÿ8ŠÒÿ£·-

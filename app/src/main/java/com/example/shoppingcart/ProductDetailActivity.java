@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,7 @@ public class ProductDetailActivity extends AppCompatActivity implements View.OnC
     ColorAdapter colorAdapter;
     SizeAdapter sizeAdapter;
     StringBuilder attributes;
+    ImageView closeBtn;
     RecyclerView.LayoutManager colorManager, sizeManager;
     CartService cartService;
     Button addToCart;
@@ -56,7 +58,6 @@ public class ProductDetailActivity extends AppCompatActivity implements View.OnC
     String productId;
     AlertDialog dialog;
     SpotsDialog.Builder builder;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +72,8 @@ public class ProductDetailActivity extends AppCompatActivity implements View.OnC
         attributeLayout = findViewById(R.id.attribute_view);
         sizeAttribute = findViewById(R.id.size_list_view);
         productName = findViewById(R.id.product_name);
+        closeBtn = findViewById(R.id.close_btn);
+        closeBtn.setOnClickListener(this);
         attributeService = ApiUtilities.attributeService();
         colorManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         sizeManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -175,6 +178,9 @@ public class ProductDetailActivity extends AppCompatActivity implements View.OnC
             else {
                 Toast.makeText(this, "Please add an attribute", Toast.LENGTH_SHORT).show();
             }
+        }
+        else if(v==closeBtn) {
+            finish();
         }
     }
 

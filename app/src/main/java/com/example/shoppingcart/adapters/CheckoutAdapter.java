@@ -35,7 +35,9 @@ public class CheckoutAdapter extends FragmentPagerAdapter {
             addressFragment.setOnRequestSuccessListener(onRequestSuccessListener);
             return addressFragment;
         }else if (i == 1) {
-            return new PaymentFragment();
+            PaymentFragment paymentFragment =  new PaymentFragment();
+            paymentFragment.setOnRequestSuccessListener(onRequestSuccessListener);
+            return paymentFragment;
         }else {
             return new BackFragment();
         }

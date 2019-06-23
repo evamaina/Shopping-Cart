@@ -1,4 +1,4 @@
 
-7squid:S1170"!Make this final field static too.(ÅÁÉx
-rsquid:S3923""[Remove this conditional structure or edit its code blocks so that they're not all the same.(÷¦¦Ò
-lsquid:S00116"URename this field "PAGE_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÁÉx
+=squid:S1170"!Make this final field static too.(×¤´”üÿÿÿÿ
+‚squid:S14883"dImmediately return this expression instead of assigning it to the temporary variable "linearLayout".(çí8ßâ¹Î·-
+rsquid:S00116"URename this field "PAGE_COUNT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×¤´”üÿÿÿÿ

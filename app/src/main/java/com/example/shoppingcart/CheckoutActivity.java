@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.shoppingcart.adapters.CheckoutAdapter;
@@ -18,25 +19,51 @@ import net.skoumal.fragmentback.BackFragmentFragmentActivity;
 
 public class CheckoutActivity extends AppCompatActivity implements OnRequestSuccessListener {
     ViewPager checkOutViewPager;
-    TabLayout checkOutTabLayout;
     CheckoutAdapter checkoutAdapter;
+    ImageView paymentPolygon, addressPolygon, completePolygon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
+        paymentPolygon = findViewById(R.id.payment_polygon);
+        addressPolygon = findViewById(R.id.addrress_polygon);
+        completePolygon = findViewById(R.id.complete_polygon);
         checkOutViewPager = findViewById(R.id.checkout_view_pager);
-        checkOutTabLayout = findViewById(R.id.checkout_tablayout);
+        checkOutViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                switch (i){
+                    case 0:
+                        paymentPolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        addressPolygon.setImageResource(R.drawable.ic_polygon_active);
+                        completePolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        break;
+                    case 1:
+                        paymentPolygon.setImageResource(R.drawable.ic_polygon_active);
+                        addressPolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        completePolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        break;
+                    case 2:
+                        paymentPolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        addressPolygon.setImageResource(R.drawable.ic_polygon_inactive);
+                        completePolygon.setImageResource(R.drawable.ic_polygon_active);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
         checkoutAdapter = new CheckoutAdapter(getSupportFragmentManager(), this, this);
-
         checkOutViewPager.setAdapter(checkoutAdapter);
-        checkOutTabLayout.setupWithViewPager(checkOutViewPager);
-
-        for (int i = 0; i<checkOutTabLayout.getTabCount();i++) {
-            TabLayout.Tab tab = checkOutTabLayout.getTabAt(i);
-            View tabView = checkoutAdapter.getTab(i);
-            checkOutTabLayout.getTabAt(i).setCustomView(tabView);
-        }
 
     }
 

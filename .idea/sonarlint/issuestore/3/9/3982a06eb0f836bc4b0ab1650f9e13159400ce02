@@ -1,7 +1,11 @@
 
-ysquid:UselessImportCheck"IRemove this unused import 'com.example.shoppingcart.utilities.Constants'.(Ô±ƒíùÿÿÿÿ8³¤Ë£·-
+Osquid:S1659",Declare "addressPolygon" on a separate line.(ÍÒÖ´üÿÿÿÿ8ÚÄÃÍ·-
+ƒsquid:UselessImportCheck"SRemove this unused import 'net.skoumal.fragmentback.BackFragmentAppCompatActivity'.(ÜÇ½ ùÿÿÿÿ8úÛº£·-
+‚squid:UselessImportCheck"RRemove this unused import 'net.skoumal.fragmentback.BackFragmentFragmentActivity'.(¶·Ñ‹üÿÿÿÿ8±ëÊ£·-
 hsquid:UselessImportCheck"8Remove this unused import 'android.app.FragmentManager'.(í£“ûÿÿÿÿ8«†¸¥·-
-ƒsquid:UselessImportCheck"SRemove this unused import 'net.skoumal.fragmentback.BackFragmentAppCompatActivity'.(ÜÇ½ ùÿÿÿÿ8úÛº£·-
+Psquid:S1659"-Declare "completePolygon" on a separate line.(ÍÒÖ´üÿÿÿÿ8ÚÄÃÍ·-
+ysquid:UselessImportCheck"IRemove this unused import 'com.example.shoppingcart.utilities.Constants'.(Ô±ƒíùÿÿÿÿ8³¤Ë£·-
+V"squid:SwitchLastCaseIsDefaultCheck)""Add a default case to this switch.(ìúÇV8²‡ÙÍ·-
+^squid:UselessImportCheck	".Remove this unused import 'android.view.View'.(Ø½­äşÿÿÿÿ8«ÇãÌ·-
 lsquid:UselessImportCheck"<Remove this unused import 'android.support.v4.app.Fragment'.(îñ«úÿÿÿÿ8êŒ¹¥·-
-Esquid:S1481$"(Remove this unused "tab" local variable.(­¸s8«†¸¥·-
-‚squid:UselessImportCheck"RRemove this unused import 'net.skoumal.fragmentback.BackFragmentFragmentActivity'.(¶·Ñ‹üÿÿÿÿ8±ëÊ£·-
+tsquid:UselessImportCheck"DRemove this unused import 'android.support.design.widget.TabLayout'.(ªë¿Áøÿÿÿÿ8«ÇãÌ·-
